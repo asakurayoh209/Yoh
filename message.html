@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary My Love ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hearts-top {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        h1 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .date {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .message {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .love-meter {
+            margin: 30px 0;
+        }
+
+        .love-meter label {
+            display: block;
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            animation: fillProgress 2s ease-out;
+        }
+
+        @keyframes fillProgress {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .special-moments {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .special-moments h3 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .moments-list {
+            color: #333;
+            text-align: left;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .moments-list li {
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #764ba2;
+            border: 2px solid #764ba2;
+        }
+
+        .btn-secondary:hover {
+            background: #764ba2;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .signature {
+            margin-top: 30px;
+            color: #764ba2;
+            font-size: 1.3em;
+            font-style: italic;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .falling-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .heart-fall {
+            position: absolute;
+            font-size: 2em;
+            animation: fall 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="falling-hearts" id="fallingHearts"></div>
+
+    <div class="container">
+        <div class="hearts-top">❤️ 💕 ❤️</div>
+
+        <h1>Happy Monthsary! 🎉</h1>
+        <div class="date">One month of beautiful memories with you</div>
+
+        <div class="message">
+            <p>
+                My dearest,<br><br>
+                Today marks <span class="highlight">one month</span> since we started this amazing journey together, and I couldn't be happier. Every single day with you has been filled with joy, laughter, and countless moments I'll cherish forever.<br><br>
+                You make my life so much brighter. Your smile, your laughter, and the way you care about others inspire me to be a better person. Thank you for being so <span class="highlight">wonderful, kind, and loving</span>.<br><br>
+                I'm so excited for all the memories we'll create together in the future. Here's to many more months (and years!) of happiness, love, and adventure with you. 💕
+            </p>
+        </div>
+
+        <div class="love-meter">
+            <label>How much I love you:</label>
+            <div class="progress-bar">
+                <div class="progress-fill">INFINITY ∞</div>
+            </div>
+        </div>
+
+        <div class="special-moments">
+            <h3>✨ Special Moments We've Shared</h3>
+            <ul class="moments-list">
+                <li>💫 Our first day together</li>
+                <li>😄 All the laughs and inside jokes</li>
+                <li>🤗 Late-night talks and conversations</li>
+                <li>🌙 Precious moments just us</li>
+                <li>💝 Your kindness and support</li>
+            </ul>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-primary" onclick="showMessage()">💌 Read More</button>
+            <button class="btn-secondary" onclick="playMusic()">🎵 Play Song</button>
+        </div>
+
+        <div class="signature">
+            Forever yours,<br>
+            <span style="font-size: 1.2em;">Your Love ❤️</span>
+        </div>
+    </div>
+
+    <script>
+        // Create falling hearts
+        function createFallingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart-fall';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            document.getElementById('fallingHearts').appendChild(heart);
+
+            setTimeout(() => heart.remove(), 7000);
+        }
+
+        // Create hearts periodically
+        setInterval(createFallingHeart, 500);
+
+        // Show additional message
+        function showMessage() {
+            alert('I love you more than words can express! 💕\n\nThank you for being my everything. You mean the world to me!\n\nHappy Monthsary, my beautiful girlfriend! 🌹');
+        }
+
+        // Play music (optional - you can replace with actual music URL)
+        function playMusic() {
+            alert('🎵 Playing your favorite song... 🎶\n\n(Replace the playMusic function with an actual audio player if you want to add music!)');
+        }
+    </script>
+</body>
+</html>
